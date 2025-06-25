@@ -27,7 +27,7 @@ const Contact = () => {
       </motion.h2>
 
       <motion.p variants={fadeInUp} custom={1} initial="hidden" animate="visible" className="max-w-[60ch] text-gray-600">
-        Whether you have an idea, project, or just want to say hi ✨, my inbox is always open. Let's create impactful solutions together.
+        Whether you have an idea, project, or just want to say hi ✨, my inbox is always open. Let&apos;s create impactful solutions together.
       </motion.p>
 
       <motion.form variants={fadeInUp} custom={2} initial="hidden" animate="visible" className="max-w-3xl mt-8 space-y-5">

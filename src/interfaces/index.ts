@@ -1,10 +1,10 @@
-type NavLinkProps = {
+export type NavLinkProps = {
   path: string;
   name: string;
   variant?: "light" | "dark";
 };
 
-type PortfolioCardProps = {
+export type PortfolioCardProps = {
   title: string;
   description: string;
   imageSrc: string;

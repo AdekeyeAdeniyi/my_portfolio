@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import Logo from "@/images/logo_black.svg";
 import NavLink from "./NavLink";
+import { NavLinkProps } from "@/interfaces";
 
 const navItems: NavLinkProps[] = [
   { name: "Home", path: "/" },

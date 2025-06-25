@@ -7,8 +7,6 @@ import PortfolioCard from "./PorfolioCard";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
-const categories = ["All", "Fullstack", "ML", "Mentoring", "Coaching"];
-
 const portfolioItems = [
   {
     title: "Full-Stack Web App",
@@ -54,8 +52,8 @@ const portfolioItems = [
 
 const ProjectsSection = () => {
   const router = useRouter();
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [showAll, setShowAll] = useState(false);
+  const [activeCategory] = useState("All");
+  const [showAll] = useState(false);
 
   const filteredItems = portfolioItems.filter((item) => (activeCategory === "All" ? true : item.category === activeCategory));
 

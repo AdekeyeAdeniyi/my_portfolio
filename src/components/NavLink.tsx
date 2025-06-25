@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { NavLinkProps } from "@/interfaces";
 
 const NavLink = ({ path, name, variant = "dark" }: NavLinkProps) => {
   const pathname = usePathname();

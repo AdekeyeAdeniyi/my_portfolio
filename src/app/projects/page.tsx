@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const projects = [
   {
@@ -103,7 +104,7 @@ export default function ProjectsPage() {
 
               {/* Image Section */}
               <div className="md:w-1/3 mt-6 md:mt-0">
-                <img src={project.image} alt={project.title} className="rounded-md w-full object-cover max-h-48" />
+                <Image src={project.image} alt={project.title} className="rounded-md w-full object-cover max-h-48" />
               </div>
             </div>
           </motion.li>
