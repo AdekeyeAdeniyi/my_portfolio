@@ -37,10 +37,6 @@ const ParticlesComponent = () => {
             fpsLimit: 120,
             interactivity: {
               events: {
-                onHover: {
-                  enable: true,
-                  mode: "grab",
-                },
                 resize: { enable: true },
               },
               modes: {

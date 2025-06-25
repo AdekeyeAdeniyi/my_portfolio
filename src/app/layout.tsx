@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { DM_Serif_Display, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import CursorInvertGlow from "@/components/CursorInvertGlow";
+import NavigationSection from "@/components/NavigationSection";
+import Footer from "@/components/FooterSection";
 
 const sans = Space_Grotesk({
   subsets: ["latin"],
@@ -28,8 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sans.className} ${serif.variable}  antialiased isolate`}>
-        {children}
-        <CursorInvertGlow />
+        <NavigationSection />
+        <div className="pt-24">{children}</div>
+        {/* <CursorInvertGlow /> */}
+        <Footer />
       </body>
     </html>
   );

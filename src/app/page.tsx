@@ -1,20 +1,18 @@
 import ParticlesComponent from "@/components/ParticlesBackground";
 import HeroSection from "@/components/HeroSection";
-import Footer from "@/components/FooterSection";
-import Services from "@/components/ServicesSection";
+import ServicesSection from "@/components/ServicesSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-montserrat)] w-full">
-      <main>
-        <div className="relative h-dvh px-8">
-          <HeroSection />
-          <ParticlesComponent />
-        </div>
+    <main className="font-[family-name:var(--font-montserrat)] w-full">
+      <div className="py-8 sm:py-0 relative lg:h-[90dvh] px-8">
+        <HeroSection />
+        <ParticlesComponent />
+      </div>
 
-        <Services />
-      </main>
-      <Footer />
-    </div>
+      <ServicesSection />
+      <ProjectsSection />
+    </main>
   );
 }

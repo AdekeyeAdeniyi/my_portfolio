@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Code, Brain, GraduationCap, LifeBuoy } from "lucide-react";
 
-// Correct easing using a cubic-bezier array
 const easing: [number, number, number, number] = [0.42, 0, 0.58, 1];
 
 const containerVariants = {
@@ -48,12 +47,12 @@ const services = [
   },
 ];
 
-const Services = () => {
+const ServicesSection = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="min-h-[90vh] grid grid-cols-1 md:grid-cols-6">
+    <section id="services" className=" min-h-[90vh] grid grid-cols-1 md:grid-cols-6">
       <div className="bg-black hidden md:block"></div>
 
       <div
@@ -69,13 +68,13 @@ const Services = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="relative font-serif text-3xl md:text-5xl font-medium pb-4 mb-8 md:mb-20 before:content-[''] before:absolute before:bottom-0 before:left-0.5 before:w-20 before:h-1 before:bg-black">
+            className="relative font-serif text-3xl md:text-4xl font-medium pb-4 mb-8 md:mb-20 before:content-[''] before:absolute before:bottom-0 before:left-0.5 before:w-20 before:h-1 before:bg-black">
             What I do
           </motion.h2>
 
           <motion.div ref={containerRef} variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"} className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {services.map((service, index) => (
-              <motion.div key={index} variants={cardVariants} className="mb-12 p-6 max-w-[500px]">
+              <motion.div key={index} variants={cardVariants} className=" p-6 max-w-[500px]">
                 <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center mb-6 shadow-md">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-gray-700">{service.desc}</p>
@@ -88,4 +87,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesSection;

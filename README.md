@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✨ Emmanuel Adekeye — Developer Portfolio
 
-## Getting Started
+Welcome to my personal portfolio website, built with modern web tools like **Next.js**, **Tailwind CSS**, **ShadCN UI**, and **React Icons**. This site showcases my projects, skills, and a bit about who I am as a developer.
 
-First, run the development server:
+---
+
+## 🔧 Tech Stack
+
+- **Next.js** — React framework with App Router for fast, SEO-friendly pages
+- **Tailwind CSS** — Utility-first CSS for rapid and responsive design
+- **ShadCN UI** — Accessible and customizable component library powered by Radix UI
+- **React Icons** — Clean and scalable icons, including brand icons like GitHub, Twitter, etc.
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+git clone https://github.com/AdekeyeAdeniyi/my_porfolio.git
+cd my_porfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit your portfolio at: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💼 Sections Included
 
-## Learn More
+- 🏠 **Home** – Intro and headline
+- 💡 **Projects** – Featured work with links to live demos and GitHub
+- 📫 **Contact** – Get in touch via form or social links
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📷 Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> _You can add a screenshot below:_
 
-## Deploy on Vercel
+```md
+![Portfolio Screenshot](screenshot.png)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📎 Useful Links
+
+- [Tailwind CSS Docs](https://tailwindcss.com/docs)
+- [Next.js App Router Docs](https://nextjs.org/docs/app)
+- [ShadCN UI Docs](https://ui.shadcn.dev)
+- [React Icons Library](https://react-icons.github.io/react-icons)
+
+---
+
+## 📄 License
+
+This project is open-source and licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgements
+
+Special thanks to:
+
+- [ShadCN](https://ui.shadcn.dev)
+- [Tailwind Labs](https://tailwindcss.com)
+- [Vercel](https://vercel.com) for hosting

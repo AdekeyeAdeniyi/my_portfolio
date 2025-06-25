@@ -4,4 +4,7 @@
 @theme inline {
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
+
+  --color-primary: black;
+  --color-primary-foreground: white;
 }
