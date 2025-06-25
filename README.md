@@ -36,11 +36,7 @@ Visit your portfolio at: [http://localhost:3000](http://localhost:3000)
 
 ## 📷 Preview
 
-> _You can add a screenshot below:_
-
-```md
-![Portfolio Screenshot](screenshot.png)
-```
+![Porfolio Screenshot](./screenshot.png)
 
 ---
 
