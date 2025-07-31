@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
+
+import Profile from "../images/image.jpeg";
 
 const HeroSection = () => {
   return (
@@ -12,14 +15,15 @@ const HeroSection = () => {
         <p className="text-lg text-gray-700 mb-6 font-normal max-w-[45ch]">
           I’m a Software Engineer and an aspiring Machine Learning Developer, driven by a passion for intelligent systems and grounded in a strong foundation of software craftsmanship.
         </p>
-
-        <Button className="w-fit" size="lg">
-          My Resume <span>&rarr;</span>
-        </Button>
+        <a href="/Emmanuel_Adekeye_Resume.pdf" download>
+          <Button className="w-fit" size="lg">
+            My Resume <span>&rarr;</span>
+          </Button>
+        </a>
       </motion.div>
 
-      <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="flex justify-center items-center">
-        {/* <Image src="" alt="Solomon Eyitene" width={400} height={500} className="rounded-md object-cover grayscale" /> */}
+      <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="flex justify-center items-center   w-full">
+        <Image src={Profile} alt="Emmanuel Adekeye" className="  h-[400px] w-[400px] object-cover object-top rounded-full grayscale" />
       </motion.div>
     </section>
   );

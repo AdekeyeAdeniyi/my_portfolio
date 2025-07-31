@@ -6,53 +6,83 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+import AjoByCowris from "../../images/ajo.png";
+import SendCowris from "../../images/cowris.png";
+import ForbesRoyal from "../../images/forbesroyal.png";
+import Micromerce from "../../images/micromerce.png";
+import Timart from "../../images/timart.png";
+import API from "../../images/api.png";
+import Porfolio from "../../images/porfolio.png";
+
 const projects = [
   {
-    slug: "team-collaboration-dashboard",
-    title: "Team Collaboration Dashboard",
-    description: "A real-time dashboard to enhance team productivity with task management and chat features.",
-    tags: ["React", "Node.js", "MongoDB"],
-    live: "https://teamdash.vercel.app",
-    github: "https://github.com/adekeyeadeniyi",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80",
+    slug: "ojaeko-api",
+    title: "Ojaeko eCommerce API (In Progress)",
+    description: "Building a scalable and modular RESTful API with Nest.js for the Ojaeko eCommerce application, handling authentication, product management, and order processing.",
+    tags: ["Nest.js", "TypeScript", "REST API", "eCommerce"],
+    image: API,
+    live: "https://iilasg-ecommerce-testing-production.up.railway.app/api",
+    github: "https://github.com/AdekeyeAdeniyi/IILASG-ECOMMERCE-TESTING",
   },
   {
-    slug: "ai-resume-parser",
-    title: "AI Resume Parser",
-    description: "Extracts and categorizes key resume data using natural language processing.",
-    tags: ["Python", "NLP", "FastAPI"],
-    live: "https://resumeparser.dev",
-    github: "https://github.com/adekeyeadeniyi",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80",
+    slug: "timart-business-solution",
+    title: "Timart Business Solution",
+    description:
+      "Tested and validated web, desktop, and mobile applications to ensure seamless performance, responsiveness, and cross-platform functionality. Collaborated with developers to identify bugs, improve UI/UX, and maintain application quality.",
+    tags: ["QA", "Web", "Mobile", "Desktop"],
+    image: Timart,
+    live: "https://gettimart.com/",
+    github: "",
   },
   {
-    slug: "portfolio-site",
+    slug: "forbes-royal-school",
+    title: "Forbes Royal School",
+    description:
+      "Taught grade school students both practical and theoretical aspects of technology, nurturing curiosity and foundational tech skills through hands-on learning and guided instruction.",
+    tags: ["Education", "Coaching", "Tech Literacy"],
+    image: ForbesRoyal,
+    live: "https://forbesroyalschools.com/",
+    github: "",
+  },
+  {
+    slug: "client-onboarding-platform",
+    title: "Client Onboarding Platform",
+    description: "Developed a web app to streamline client onboarding and complex data migrations for tech companies, with self-service and guided workflows.",
+    tags: ["SaaS", "Onboarding", "Data Migration", "Web App"],
+    image: Micromerce,
+    live: "https://www.micromerce.com/en",
+    github: "",
+  },
+  {
+    slug: "ajo-by-cowris",
+    title: "Ajo by Cowris",
+    description: "Converted design mockups into a responsive Vue.js application for a collaborative funding platform, enabling users to securely contribute and manage pooled money with ease.",
+    tags: ["Vue.js", "Fintech", "Frontend", "Design to Code"],
+    image: AjoByCowris,
+    live: "https://ajo.cowris.com/",
+    github: "",
+  },
+  {
+    slug: "cowris",
+    title: "Cowris",
+    description: "Fixed and created Vue.js components for a cross-border money transfer platform, enhancing user experience and ensuring seamless transactions across continents.",
+    tags: ["Vue.js", "Fintech", "Frontend"],
+    image: SendCowris,
+    live: "https://send.cowris.com/",
+    github: "",
+  },
+  {
+    slug: "personal-portfolio",
     title: "Personal Portfolio Website",
-    description: "A minimal and elegant portfolio to showcase projects, blog posts, and contact info.",
-    tags: ["Next.js", "TailwindCSS"],
-    github: "https://github.com/adekeyeadeniyi",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80",
+    description: "A clean and responsive portfolio built with Next.js and TailwindCSS to showcase projects, skills, and contact information.",
+    tags: ["Next.js", "TailwindCSS", "Portfolio"],
+    image: Porfolio,
+    live: "https://my-portfolio-ten-smoky-17.vercel.app/",
+    github: "https://github.com/AdekeyeAdeniyi/my_portfolio",
   },
-  {
-    slug: "portfolio-sites",
-    title: "Personal Portfolio Website",
-    description: "A minimal and elegant portfolio to showcase projects, blog posts, and contact info.",
-    tags: ["Next.js", "TailwindCSS"],
-    github: "https://github.com/adekeyeadeniyi",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80",
-  },
-  {
-    slug: "portfolio-sited",
-    title: "Personal Portfolio Website",
-    description: "A minimal and elegant portfolio to showcase projects, blog posts, and contact info.",
-    tags: ["Next.js", "TailwindCSS"],
-    github: "https://github.com/adekeyeadeniyi",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80",
-  },
-  // Add more projects as needed
 ];
 
-const PROJECTS_PER_PAGE = 2;
+const PROJECTS_PER_PAGE = 3;
 
 export default function ProjectsPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -91,7 +121,7 @@ export default function ProjectsPage() {
                 <div className="mt-4 flex gap-4">
                   {project.live && (
                     <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-sm underline text-blue-600">
-                      🔗 Live Demo
+                      🔗 Live View
                     </a>
                   )}
                   {project.github && (
@@ -104,7 +134,7 @@ export default function ProjectsPage() {
 
               {/* Image Section */}
               <div className="md:w-1/3 mt-6 md:mt-0">
-                <Image src={project.image} alt={project.title} className="rounded-md w-full object-cover max-h-48" />
+                <Image src={project.image} alt={project.title} className="rounded-md w-full object-cover max-h-48" width={400} height={400} />
               </div>
             </div>
           </motion.li>

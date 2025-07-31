@@ -19,6 +19,10 @@ const serif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Adekeye | Portfolio",
   description: "Welcome to the official portfolio of Adekeye – a showcase of modern web development projects, skills, and experience.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

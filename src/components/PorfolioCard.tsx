@@ -2,13 +2,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface PortfolioCardProps {
   title: string;
   description: string;
   icon: React.ReactNode;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   category: string;
   color: string;
 }

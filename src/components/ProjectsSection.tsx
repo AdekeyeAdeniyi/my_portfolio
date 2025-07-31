@@ -7,46 +7,55 @@ import PortfolioCard from "./PorfolioCard";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
+import AjoByCowris from "../images/ajo.png";
+import SendCowris from "../images/cowris.png";
+import ForbesRoyal from "../images/forbesroyal.png";
+import Micromerce from "../images/micromerce.png";
+import Timart from "../images/timart.png";
+
 const portfolioItems = [
   {
-    title: "Full-Stack Web App",
-    description: "Built scalable and responsive applications with Next.js and Node.js.",
+    title: "Timart Business Solution",
+    description:
+      "Tested and validated web, desktop, and mobile applications to ensure seamless performance, responsiveness, and cross-platform functionality. Collaborated with developers to identify bugs, improve UI/UX, and maintain application quality.",
     icon: <Code className="w-8 h-8 text-white" />,
-    imageSrc: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    category: "Fullstack",
+    imageSrc: Timart,
+    category: "Quality Assurance",
     color: "bg-[#0f172a]",
   },
   {
-    title: "Machine Learning Pipeline",
-    description: "Deployed ML models with Python and TensorFlow for real-time predictions.",
+    title: "Forbes Royal School",
+    description:
+      "Taught grade school students both practical and theoretical aspects of technology, nurturing curiosity and foundational tech skills through hands-on learning and guided instruction.",
+    icon: <LifeBuoy className="w-8 h-8 text-white" />,
+    imageSrc: ForbesRoyal,
+    category: "Education",
+    color: "bg-[#dc2626]",
+  },
+
+  {
+    title: "Client Onboarding Platform",
+    description: "Developed a web app to streamline client onboarding and complex data migrations for tech companies, with self-service and guided workflows.",
+    icon: <Code className="w-8 h-8 text-white" />,
+    imageSrc: Micromerce,
+    category: "SaaS",
+    color: "bg-[#0f172a]",
+  },
+  {
+    title: "Ajo by Cowris",
+    description: "Converted design mockups into a responsive Vue.js application for a collaborative funding platform, enabling users to securely contribute and manage pooled money with ease.",
     icon: <Brain className="w-8 h-8 text-white" />,
-    imageSrc: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    category: "ML",
+    imageSrc: AjoByCowris,
+    category: "Frontend",
     color: "bg-[#1e293b]",
   },
   {
-    title: "Mentorship Program",
-    description: "Guided over 50 students from zero to junior developer level.",
+    title: "Cowris",
+    description: "Fixed and created Vue.js components for a cross-border money transfer platform, enhancing user experience and ensuring seamless transactions across continents.",
     icon: <GraduationCap className="w-8 h-8 text-white" />,
-    imageSrc: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    category: "Mentoring",
+    imageSrc: SendCowris,
+    category: "Fintech",
     color: "bg-[#2563eb]",
-  },
-  {
-    title: "Coaching Session",
-    description: "One-on-one coaching for productivity and tech career navigation.",
-    icon: <LifeBuoy className="w-8 h-8 text-white" />,
-    imageSrc: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    category: "Coaching",
-    color: "bg-[#dc2626]",
-  },
-  {
-    title: "E-Commerce App",
-    description: "Developed with MERN stack and payment gateway integration.",
-    icon: <Code className="w-8 h-8 text-white" />,
-    imageSrc: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    category: "Fullstack",
-    color: "bg-[#0f172a]",
   },
 ];
 
