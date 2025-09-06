@@ -96,6 +96,7 @@ const Contact = () => {
         toast.error(data.message || "Something went wrong.");
       }
     } catch (err) {
+      console.error(err);
       toast.error("Server error. Please try again later.");
     } finally {
       setLoading(false);
