@@ -11,18 +11,17 @@ import SendCowris from "../../images/cowris.png";
 import ForbesRoyal from "../../images/forbesroyal.png";
 import Micromerce from "../../images/micromerce.png";
 import Timart from "../../images/timart.png";
-import API from "../../images/api.png";
+import Scaremoor from "../../images/scaremoor.png";
 import Porfolio from "../../images/porfolio.png";
 
 const projects = [
   {
-    slug: "ojaeko-api",
-    title: "Ojaeko eCommerce API (In Progress)",
-    description: "Building a scalable and modular RESTful API with Nest.js for the Ojaeko eCommerce application, handling authentication, product management, and order processing.",
-    tags: ["Nest.js", "TypeScript", "REST API", "eCommerce"],
-    image: API,
-    live: "https://iilasg-ecommerce-testing-production.up.railway.app/api",
-    github: "https://github.com/AdekeyeAdeniyi/IILASG-ECOMMERCE-TESTING",
+    slug: "scaremoor-pub",
+    title: "Scaremoor Book",
+    description: "An interactive horror puzzle book and immersive experience where readers must solve clues and uncover secrets to escape the haunted village of Scaremoor.",
+    tags: ["Nextjs", "Interactive Fiction", "Horror", "Escape Room"],
+    image: Scaremoor,
+    live: "https://www.scaremoor.com/",
   },
   {
     slug: "timart-business-solution",

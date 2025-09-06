@@ -3,6 +3,7 @@ import { DM_Serif_Display, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import NavigationSection from "@/components/NavigationSection";
 import Footer from "@/components/FooterSection";
+import { Toaster } from "sonner";
 
 const sans = Space_Grotesk({
   subsets: ["latin"],
@@ -36,6 +37,8 @@ export default function RootLayout({
         <NavigationSection />
         <div className="pt-24">{children}</div>
         <Footer />
+
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );

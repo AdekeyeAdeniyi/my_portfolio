@@ -17,9 +17,7 @@ const ParticlesComponent = () => {
     });
   }, []);
 
-  const particlesLoaded = useCallback(async (container?: Container): Promise<void> => {
-    console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(async (container?: Container): Promise<void> => {}, []);
 
   return (
     <>
