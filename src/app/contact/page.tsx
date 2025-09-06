@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { Loader2 } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -23,6 +24,7 @@ const fadeInUp = {
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", interest: "", message: "" });
+  const [loading, setLoading] = useState(false);
 
   const [errors, setErrors] = useState({
     name: "",
@@ -72,27 +74,31 @@ const Contact = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (validate()) {
-      try {
-        const res = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form),
+    if (!validate()) return;
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success(data.message, {
+          description: data.description,
         });
-
-        const data = await res.json();
-
-        if (res.ok) {
-          toast.success(data.message, {
-            description: data.description,
-          });
-          setForm({ name: "", email: "", interest: "", message: "" });
-        } else {
-          toast.error(data.message || "Something went wrong.");
-        }
-      } catch (err) {
-        toast.error("Server error. Please try again later.");
+        setForm({ name: "", email: "", interest: "", message: "" });
+      } else {
+        toast.error(data.message || "Something went wrong.");
       }
+    } catch (err) {
+      toast.error("Server error. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -171,8 +177,17 @@ const Contact = () => {
         </div>
 
         <motion.div variants={fadeInUp} custom={3} initial="hidden" animate="visible">
-          <Button size="lg" type="submit">
-            Just Send <span className="ml-1">&rarr;</span>
+          <Button size="lg" type="submit" disabled={loading}>
+            {loading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                Just Send <span className="ml-1">&rarr;</span>
+              </>
+            )}
           </Button>
         </motion.div>
       </motion.form>
