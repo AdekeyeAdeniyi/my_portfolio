@@ -35,7 +35,7 @@ const Contact = () => {
 
   const validate = () => {
     let valid = true;
-    let newErrors = { name: "", email: "", interest: "", message: "" };
+    const newErrors = { name: "", email: "", interest: "", message: "" };
 
     if (!form.name.trim()) {
       newErrors.name = "Name is required";

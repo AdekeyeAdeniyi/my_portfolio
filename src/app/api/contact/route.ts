@@ -49,7 +49,8 @@ export async function POST(request: Request) {
       },
       { status: 200 }
     );
-  } catch (error) {
+  } catch (err) {
+    console.error(err);
     return NextResponse.json({ success: false, message: "Failed to send email. Please try again later." }, { status: 500 });
   }
 }
