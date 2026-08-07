@@ -27,23 +27,23 @@ const cardVariants = {
 const services = [
   {
     icon: <Code className="w-8 h-8 text-white" />,
-    title: "Full-Stack Web Development",
-    desc: "I build scalable and responsive web applications from front to back using modern tools and frameworks.",
+    title: "Full-Stack Development",
+    desc: "I build scalable, high-performance web applications and APIs using modern technologies, with a focus on clean architecture, performance, and user experience.",
   },
   {
     icon: <Brain className="w-8 h-8 text-white" />,
-    title: "AI / ML Engineering",
-    desc: "I apply machine learning and artificial intelligence to solve real-world problems.",
+    title: "AI & Machine Learning",
+    desc: "I'm expanding my expertise in artificial intelligence and machine learning, building intelligent solutions through data-driven models and modern AI technologies.",
   },
   {
     icon: <GraduationCap className="w-8 h-8 text-white" />,
-    title: "Mentoring",
-    desc: "I help aspiring developers grow through personalized guidance and practical projects.",
+    title: "Technical Mentoring",
+    desc: "I support aspiring developers by sharing practical knowledge, reviewing code, and guiding them through real-world software engineering projects.",
   },
   {
     icon: <LifeBuoy className="w-8 h-8 text-white" />,
-    title: "Coaching",
-    desc: "I work with individuals to unlock their potential, boost performance, and stay motivated.",
+    title: "Technical Consulting",
+    desc: "I help individuals and businesses transform ideas into scalable software solutions through thoughtful planning, architecture, and implementation.",
   },
 ];
 

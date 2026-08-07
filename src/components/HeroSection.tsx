@@ -13,7 +13,8 @@ const HeroSection = () => {
         <h1 className="text-4xl font-medium mb-2 md:mb-4 font-serif">Hi, my name is</h1>
         <h2 className="text-5xl font-light text-black mb-4 font-serif ">Emmanuel Adekeye</h2>
         <p className="text-lg text-gray-700 mb-6 font-normal max-w-[45ch]">
-          I’m a Software Engineer and an aspiring Machine Learning Developer, driven by a passion for intelligent systems and grounded in a strong foundation of software craftsmanship.
+          I'm a Software Engineer and aspiring Machine Learning Engineer driven by curiosity, continuous learning, and a passion for solving meaningful problems. I enjoy building high-performance
+          applications today while working toward developing intelligent systems that create lasting impact.
         </p>
         <a href="/Emmanuel_Adekeye_Resume.pdf" download>
           <Button className="w-fit" size="lg">
