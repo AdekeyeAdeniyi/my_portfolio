@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
 
-import Profile from "../images/image.jpeg";
+import Profile from "../images/image.png";
 
 const HeroSection = () => {
   return (
